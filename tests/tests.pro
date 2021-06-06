@@ -1,6 +1,6 @@
 include(gtest_dependency.pri)
 TEMPLATE = app
-CONFIG += c++11
+CONFIG += c++
 CONFIG += console
 CONFIG -= app_bundle
 CONFIG += thread

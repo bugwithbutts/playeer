@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.0, 2021-06-06T14:26:57. -->
+<!-- Written by QtCreator 4.14.0, 2021-06-06T17:01:27. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -84,6 +84,9 @@
     <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
     <value type="bool" key="ClangTools.UseGlobalSettings">true</value>
    </valuemap>
+   <valuelist type="QVariantList" key="ProjectExplorer.Project.Environment">
+    <value type="QString">GOOGLETEST_DIR=/home/nekit/proj/playeer/external/googletest/</value>
+   </valuelist>
   </valuemap>
  </data>
  <data>

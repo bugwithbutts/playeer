@@ -1,14 +1,10 @@
 #ifndef SONGTEST_H
 #define SONGTEST_H
-#include <gmock/gmock-matchers.h>
 #include <gtest/gtest.h>
 #include "songlist.h"
 #include <QDebug>
-extern "C++"
-{
-    #include <string>
-    #include <algorithm>
-}
+#include <string>
+#include <algorithm>
 TEST(findsong,songlist)
 {
     SongList s;
