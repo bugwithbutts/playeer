@@ -21,9 +21,9 @@ private slots:
 
     void on_refresh_clicked();
 
-    void on_snglst_itemDoubleClicked(QListWidgetItem *item);
+    void on_snglst_itemDoubleClicked(QListWidgetItem *item);    
 
-    void on_snglst_itemClicked(QListWidgetItem *item);
+    void on_snglst_itemPressed(QListWidgetItem *item);
 
 private:
     Ui::MainWindow *ui;

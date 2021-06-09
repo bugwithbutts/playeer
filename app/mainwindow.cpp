@@ -50,7 +50,7 @@ void MainWindow::on_snglst_itemDoubleClicked(QListWidgetItem *item)
     songlist.play(item);
 }
 
-void MainWindow::on_snglst_itemClicked(QListWidgetItem *item)
+void MainWindow::on_snglst_itemPressed(QListWidgetItem *item)
 {
     songlist.pause(item);
 }

@@ -59,7 +59,7 @@
        <widget class="QListWidget" name="snglst">
         <property name="font">
          <font>
-          <pointsize>15</pointsize>
+          <pointsize>13</pointsize>
          </font>
         </property>
        </widget>
