@@ -6,8 +6,11 @@
 #include <QUrl>
 #include <QThread>
 #include <QFileDialog>
-class SongList
+class SongList: public QObject
 {
+    Q_OBJECT
+public slots:
+    void change();
 public:
     SongList();
     void set_dir(QStringList str);
@@ -16,6 +19,7 @@ public:
     void pause(QListWidgetItem* sng);
     QString next();    
     void play(QListWidgetItem* sng);
+    ~SongList(){};
 private:
     QString dir;
     QStringList songs;

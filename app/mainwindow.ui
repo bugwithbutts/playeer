@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Music player</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/play.png</normaloff>:/play.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -25,7 +29,7 @@
         <item>
          <widget class="QPushButton" name="refresh">
           <property name="text">
-           <string>PushButton</string>
+           <string>Refresh</string>
           </property>
          </widget>
         </item>
@@ -45,7 +49,7 @@
         <item>
          <widget class="QPushButton" name="open">
           <property name="text">
-           <string>PushButton</string>
+           <string>Choose directory</string>
           </property>
          </widget>
         </item>
@@ -76,6 +80,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

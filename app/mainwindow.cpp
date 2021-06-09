@@ -25,6 +25,8 @@ void MainWindow::on_open_clicked()
     QStringList fileNames;
     if (dialog.exec())
         fileNames = dialog.selectedFiles();
+    if(fileNames.empty()) return;
+    statusBar()->showMessage(fileNames.at(0));
     songlist.set_dir(fileNames);
     on_refresh_clicked();
 

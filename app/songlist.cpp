@@ -49,31 +49,34 @@ QString SongList::next()
     return songs.at(songiter);
 }
 void SongList::play(QListWidgetItem* sng)
-{
-    sng->setIcon(QIcon(":/pause.png"));
-    if(player!=NULL) delete player;
-    player = new QMediaPlayer;    
+{ 
+    if(player!=NULL)
+    {
+        if(is_played)
+            player->pause();
+        delete player;
+    }
+    player = new QMediaPlayer;        
     player->setMedia(QUrl::fromLocalFile(QDir::toNativeSeparators(dir+"/"+sng->text()+".mp3")));
-    player->setVolume(100);
-    player->play();
-    is_played = 1;
-    if(active_song!=NULL)
-        active_song->setIcon(QIcon(":/play.png"));
+    player->setVolume(100);    
+    is_played = 0;
     active_song = sng;
+    QObject::connect(player,&QMediaPlayer::stateChanged,this,&SongList::change);
+    player->play();
 }
 void SongList::pause(QListWidgetItem* sng)
 {
     if(active_song!=sng) return;
     if(is_played)
-    {
-        player->pause();
-        sng->setIcon(QIcon(":/play.png"));
-        is_played = 0;
-    }
+        player->pause();      
+    else    
+        player->play();       
+}
+void SongList::change()
+{
+    if(is_played)
+        active_song->setIcon(QIcon(":/play.png"));
     else
-    {
-        player->play();
-        sng->setIcon(QIcon(":/pause.png"));
-        is_played = 1;
-    }
+        active_song->setIcon(QIcon(":/pause.png"));
+    is_played = (is_played)?0:1;
 }
